@@ -1,7 +1,14 @@
 import { Card, CardBody, CardHeader } from "@chakra-ui/react";
 import { CustomButton } from "components/ui";
+import { ProductCardProps } from "./ProductCard.types";
 
-export const CustomCard = () => {
+export const ProductCard = ({ balloon, onButtonClick }: ProductCardProps) => {
+  const { price } = balloon;
+
+  const onClickHandler = () => {
+    onButtonClick?.(balloon);
+  };
+
   return (
     <Card
       shadow="lg"
@@ -17,8 +24,8 @@ export const CustomCard = () => {
           width={110}
         />
       </CardBody>
-      <CustomButton width="100%" borderTopRadius={0}>
-        Заказать
+      <CustomButton width="100%" borderTopRadius={0} onClick={onClickHandler}>
+        {price} ₽
       </CustomButton>
     </Card>
   );

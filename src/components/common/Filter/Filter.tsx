@@ -3,19 +3,14 @@ import { BalloonTypes } from "./BalloonTypes/BalloonTypes";
 
 export const Filter = () => {
   return (
-    <Box
-      w="100%"
-      bg="telegram.500"
-      shadow="lg"
-      rounded="lg"
-      mb={6}
-      p="12px 20px"
-    >
-      <Stack spacing={3}>
+    <Box w="100%" bg="telegram.500" shadow="lg" rounded="lg" mb={6} p={5}>
+      <Stack spacing={5}>
         <BalloonTypes />
         <Stack>
-          <FormLabel htmlFor="color-select">Цвет</FormLabel>
           <Select bgColor="#fff" id="color-select">
+            <option hidden disabled value="">
+              Цвет
+            </option>
             <option value="Красные">Красные</option>
           </Select>
         </Stack>
