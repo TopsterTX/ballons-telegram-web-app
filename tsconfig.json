@@ -24,7 +24,12 @@
     /* Paths */
     "paths": {
       "components/*": ["./src/components/*"],
-      "assets/*": ["./src/assets/*"]
+      "assets/*": ["./src/assets/*"],
+      "store/*": ["./src/store/*"],
+      "api/*": ["./src/api/*"],
+      "utils/*": ["./src/utils/*"],
+      "types/*": ["./src/types/*"],
+      "models/*": ["./src/models/*"],
     }
   },
   "include": ["src"],

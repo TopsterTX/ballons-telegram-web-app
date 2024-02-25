@@ -1,6 +1,11 @@
 import { Box, Text } from "@chakra-ui/react";
+import { useUnit } from "effector-react";
+import { $cart } from "store/cart";
 
 export const Cart = () => {
+  const { totalPrices } = useUnit($cart);
+  const isPriceExist = totalPrices > 0;
+
   return (
     <Box
       bgColor="telegram.500"
@@ -15,10 +20,10 @@ export const Cart = () => {
       className="cart"
     >
       <Text fontSize="md" color="#fff">
-        Корзина пуста, добавьте что-нибудь...
+        {!isPriceExist ? "Корзина пуста, добавьте что-нибудь..." : "Итого:"}
       </Text>
       <Text fontSize="4xl" fontWeight="bold" color="#fff">
-        0 ₽
+        {totalPrices} ₽
       </Text>
     </Box>
   );

@@ -1,3 +1,4 @@
 export { CustomButton } from "./CustomButton/CustomButton";
-export { CustomCard } from "./CustomCard/CustomCard";
+export { ProductCard } from "./ProductCard/ProductCard";
 export { SearchInput } from "./SearchInput/SearchInput";
+export { CustomInput } from "./CustomInput/CustomInput";
